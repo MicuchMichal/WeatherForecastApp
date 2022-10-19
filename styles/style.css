@@ -1,0 +1,254 @@
+/*
+    global Styles
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: white;
+  color: black;
+  line-height: 1.5;
+  min-width: 370px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 
+    navbar 
+*/
+header {
+  background: linear-gradient(#a0d2eb, #e5eaf5);
+}
+
+nav {
+  background: white;
+  padding: 1rem 1.5rem;
+  z-index: 1000;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-header .logo {
+  height: 50px;
+}
+.nav-header .toggleButton {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.nav-header .toggleButton img {
+  width: 30px;
+  transition: all 0.3s linear;
+}
+.nav-header .toggleButton img:hover {
+  transform: rotate(90deg);
+}
+
+.linksContainer {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+.links a {
+  background: white;
+  color: #494d5f;
+  font-size: 1.1rem;
+  display: block;
+  transition: all 0.3s linear;
+  font-weight: bold;
+  padding: 0.75rem 0;
+}
+.links a:hover {
+  color: #8458B3;
+}
+
+.show-links {
+  height: 200px;
+}
+
+/* 
+    home page
+*/
+.banner {
+  min-height: 100vh;
+  padding: 10px;
+  margin-top: 100px;
+}
+.banner h1 {
+  font-size: 2.4em;
+  margin: auto;
+  max-width: 540px;
+}
+.banner h1 span {
+  border-bottom: 6px solid #8458B3;
+}
+
+/* 
+    sections
+*/
+#chart,
+#calculator {
+  min-height: 50vh;
+  padding-bottom: 5rem;
+}
+#chart h2,
+#calculator h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+#chart span,
+#calculator span {
+  color: #8458B3;
+}
+
+/* 
+    footer with returning button 
+*/
+footer {
+  background: #494d5f;
+  padding: 5rem 1rem;
+}
+footer p {
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.25em;
+}
+
+.returningButton {
+  position: fixed;
+  bottom: 6rem;
+  right: 3rem;
+  background: #8458B3;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  -webkit-animation: floatingButton 2s ease-in-out infinite;
+          animation: floatingButton 2s ease-in-out infinite;
+  visibility: hidden;
+  z-index: -100;
+}
+.returningButton img {
+  width: 50%;
+}
+
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
+@-webkit-keyframes floatingButton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes floatingButton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 
+    media querries
+*/
+/*
+    style.css
+*/
+@media screen and (min-width: 860px) {
+  nav {
+    background: transparent;
+  }
+  .navCenter {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-header .toggleButton {
+    display: none;
+  }
+  .linksContainer {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    background: transparent;
+    color: #494d5f;
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    display: block;
+    transition: all 0.3s linear;
+    margin: 0 1rem;
+    font-weight: bold;
+    padding: 0;
+  }
+  .links a:hover {
+    color: #8458B3;
+  }
+}
+/*
+    tableStyle.css
+*/
+@media screen and (min-width: 860px) {
+  .tab-button {
+    width: 200px;
+    height: 60px;
+    font-size: 1.1em;
+  }
+  .weatherForecastContainer {
+    padding: 5px;
+  }
+  .weatherForecastContainer .tableHeader {
+    font-size: 1.3em;
+  }
+}/*# sourceMappingURL=style.css.map */

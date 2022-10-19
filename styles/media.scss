@@ -1,0 +1,63 @@
+@import "variables";
+
+/*
+    style.css
+*/
+@media screen and (min-width: 860px) {
+  nav {
+    background: transparent;
+  }
+  .navCenter {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  //logo and button
+  .nav-header {
+    padding: 0;
+    .toggleButton {
+      display: none;
+    }
+  }
+  //nav links
+  .linksContainer {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+    a{
+      background: transparent;
+      color: $color-primary-5;
+      font-size: 1.1rem;
+      letter-spacing: .2em;
+      display: block;
+      transition: $transition;
+      margin: 0 1rem;
+      font-weight: bold;
+      padding: 0;
+      &:hover{
+        color: $color-primary-4;
+      }
+    }
+  }
+}
+
+/*
+    tableStyle.css
+*/
+@media screen and (min-width: 860px) {
+  .tab-button {
+    width: 200px;
+    height: 60px;
+    font-size: 1.1em;
+  }
+  .weatherForecastContainer{
+    padding: 5px;
+    .tableHeader{
+      font-size: 1.3em;
+    }
+  }
+}

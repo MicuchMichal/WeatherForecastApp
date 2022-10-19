@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/contentStyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  </head>
+  <body>
+    <header id="home">
+      <!-- navbar -->
+      <nav id="navBar">
+        <div class="navCenter">
+
+          <!-- button for links -->
+          <div class="nav-header">
+            <a href="#home"><img src="./graphics/logo.png" class="logo" alt="logo" /></a>
+            <button class="toggleButton"><img src="./graphics/burgerMenu.png" alt="menu button"></button>
+          </div>
+          <!-- links -->
+          <div class="linksContainer">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">Forecast</a>
+              </li>
+              <li>
+                <a href="#chart" class="scroll-link">Chart</a>
+              </li>
+              <li>
+                <a href="#calculator" class="scroll-link">Calculator</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- homepage and weather data-->
+      <div class="banner">
+        <h1>Weather forecast for <span>London</span></h1>
+        <div class="container">
+          <div class="weatherButtons">
+            <button class="tab-button hourlyForecast">Hourly</button>
+            <button class="tab-button threeDaysForecast">3 days</button>
+            <button class="tab-button sevenDaysForecast">7 days</button>
+            <button class="tab-button historyWeather">History</button>
+          </div>
+          <div class="weatherForecastContainer">
+            <ul class="tableContent">
+              <!-- js data will be added -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- chart section -->
+    <section id="chart" class="section">
+      <div class="title chartSection">
+        <h2>temperature <span>chart</span></h2>
+        <div class="container">
+          <div class="weatherButtons">
+            <!-- tab-button = stylesheet / chart-button = js / last one  = charts display-->
+            <button class="tab-button chart-button activeButton" data-id="hourlyChartDisplay">Hourly</button>
+            <button class="tab-button chart-button" data-id="threedaysChartDisplay">3 days</button>
+            <button class="tab-button chart-button" data-id="sevendaysChartDisplay">7 days</button>
+            <button class="tab-button chart-button historyButton" data-id="historyChartDisplay">History</button>
+          </div>
+        </div>
+        <div class="chartContainer">
+          <div class="chartContent active" id="hourlyChartDisplay">
+            <canvas id="hourlyChart"></canvas>
+          </div>
+          <div class="chartContent" id="threedaysChartDisplay">
+            <canvas id="threedaysChart"></canvas>
+          </div>
+          <div class="chartContent" id="sevendaysChartDisplay">
+            <canvas id="sevendaysChart"></canvas>
+          </div>
+          <div class="chartContent" id="historyChartDisplay">
+            <canvas id="historyChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- calculator section -->
+    <section id="calculator" class="section">
+      <div class="title">
+        <h2>heat index <span>calculator</span></h2>
+      </div>
+      <div class="calculatorSection">
+        <h3>Choose your <span>variable</span></h3>
+        <div class="calculatorButtonContainer">
+          <button class="calc-button activeButton" data-id="celsius">Celsius</button>
+          <button class="calc-button" data-id="fahrenheit">Fahrenheit</button>
+        </div>
+        <!-- container for whole calculator -->
+        <div class="calcuatorContainer"">
+          <div class="calculatorContent activeCalc" id="celsius">
+            <!-- calculator for celsius -->
+            <div class="celsiusContainer">
+              <span class="result"></span>
+              <label for="celsiusNumber">Input in <span>celsius</span></label>
+              <input type="number" id="celsiusNumber">
+              <label for="humidity">input relative <span>humidity</span> in %</label>
+              <input type="number" id="humidity">
+              <button class="submitButton">Submit</button>
+            </div>
+          </div>
+          <div class="calculatorContent" id="fahrenheit">
+            <!-- calculator for fahrenheit -->
+            <div class="fahrenheitContainer">
+              <span class="resultF"></span>
+              <label for="fahrenheitNumber">Input in <span>fahrenheit</span></label>
+              <input type="number" id="fahrenheitNumber">
+              <label for="humidityF">input relative <span>humidity</span> in %</label>
+              <input type="number" id="humidityF">
+              <button class="submitButtonF">Submit</button>
+            </div>
+          </div>
+          <!-- localstorage -->
+          <!-- <div class="lsContainer">
+            <h4></h4>
+            <div id="lsOutput"></div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="section">
+      <p>made by Michal Micuch, <span id="date"></span>.</p>
+      <p>For PANTHEON.TECH</p>
+    </footer>
+    <a class="scroll-link returningButton" href="#home">
+      <img src="./graphics/arrowUp.png" alt="arrow up">
+    </a>
+    <!-- javascript -->
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/weather.js"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+/*
+    style.css
+*/
+@media screen and (min-width: 860px) {
+  nav {
+    background: transparent;
+  }
+
+  .navCenter {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+  .nav-header .toggleButton {
+    display: none;
+  }
+
+  .linksContainer {
+    height: auto !important;
+  }
+
+  .links {
+    display: flex;
+  }
+  .links a {
+    background: transparent;
+    color: #494d5f;
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    display: block;
+    transition: all 0.3s linear;
+    margin: 0 1rem;
+    font-weight: bold;
+    padding: 0;
+  }
+  .links a:hover {
+    color: #8458B3;
+  }
+}
+/*
+    tableStyle.css
+*/
+@media screen and (min-width: 860px) {
+  .tab-button {
+    width: 200px;
+    height: 60px;
+    font-size: 1.1em;
+  }
+
+  .weatherForecastContainer {
+    padding: 5px;
+  }
+  .weatherForecastContainer .tableHeader {
+    font-size: 1.3em;
+  }
+}
